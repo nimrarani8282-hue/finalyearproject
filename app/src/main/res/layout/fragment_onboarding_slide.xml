@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <View
+        android:id="@+id/pulseCircle"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/primary_fixed"
+        android:alpha="0.18" />
+
+    <ImageView
+        android:id="@+id/ivIconPrimary"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/cd_slide_icon" />
+
+    <ImageView
+        android:id="@+id/ivIconSecondary"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="@string/cd_slide_icon" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="@color/on_surface_variant"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+</LinearLayout>

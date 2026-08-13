@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/surface_container_lowest"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <!-- Header Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTxId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TXN-2024-001"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/on_surface"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:id="@+id/tvTxUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textSize="12sp"
+                android:textColor="@color/on_surface_variant" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTxStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secured"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_tertiary_fixed_variant"
+            android:background="@drawable/bg_badge_released"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+    </LinearLayout>
+
+    <!-- Details Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:spacing="12dp">
+
+        <TextView
+            android:id="@+id/tvTxValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="$2,499.00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary" />
+
+        <ImageView
+            android:id="@+id/ivTxView"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="View Details"
+            android:scaleType="centerInside"
+            app:tint="@color/primary" />
+    </LinearLayout>
+
+</LinearLayout>

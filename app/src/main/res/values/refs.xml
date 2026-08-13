@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_shield" />
+    <drawable name="ic_payments" />
+    <drawable name="ic_search" />
+    <drawable name="ic_rocket_launch" />
+    <drawable name="ic_description" />
+    <drawable name="ic_check_circle" />
+</resources>

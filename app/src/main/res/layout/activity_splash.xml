@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface">
+
+    <!-- Logo Image -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:src="@drawable/img"
+        android:contentDescription="@string/app_name"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center" />
+
+
+
+
+    <!-- Welcome Message -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary"
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="220dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp" />
+
+    <!-- Loading Bar Background -->
+    <View
+        android:id="@+id/loadingBarBg"
+        android:layout_width="200dp"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="150dp"
+        android:background="@color/surface_container" />
+
+    <!-- Loading Bar (Animated) -->
+    <View
+        android:id="@+id/loadingBar"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="150dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/primary" />
+
+    <!-- Security Badge -->
+    <LinearLayout
+        android:id="@+id/securityBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="100dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/verified_user"
+            android:contentDescription="@string/institutional_security"
+            app:tint="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/institutional_security"
+            android:textSize="12sp"
+            android:textColor="@color/primary"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Trust Badges Row -->
+    <LinearLayout
+        android:id="@+id/trustRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:spacing="12dp">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_trust_label"
+            android:textSize="11sp"
+            android:textColor="@color/on_surface_variant" />
+    </LinearLayout>
+
+    <!-- Verifying Label -->
+    <TextView
+        android:id="@+id/tvVerifying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verifying_label"
+        android:textSize="12sp"
+        android:textColor="@color/on_surface_variant"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp" />
+
+</FrameLayout>

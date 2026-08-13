@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="@color/background">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/topAppBar" android:layout_width="match_parent" android:layout_height="56dp" android:background="@color/surface_container_lowest" app:title="@string/report_issue" app:titleTextColor="@color/on_surface" app:navigationIcon="@android:drawable/ic_menu_revert"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Opening a dispute pauses fund release until Escrow Easy support reviews the case." android:textSize="12sp" android:textColor="@color/on_error_container" android:background="@drawable/bg_card_error_container" android:padding="12dp" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Related Order" android:textSize="12sp" android:textColor="@color/on_surface_variant" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etOrderId" android:layout_width="match_parent" android:layout_height="52dp" android:hint="e.g. Order #9012" android:paddingHorizontal="14dp" android:background="@drawable/bg_rounded_outline" android:layout_marginBottom="16dp"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Describe the Issue" android:textSize="12sp" android:textColor="@color/on_surface_variant" android:layout_marginBottom="4dp"/>
+            <EditText android:id="@+id/etIssueDescription" android:layout_width="match_parent" android:layout_height="140dp" android:hint="What went wrong with this transaction?" android:gravity="top" android:padding="14dp" android:background="@drawable/bg_rounded_outline" android:layout_marginBottom="24dp"/>
+            <TextView android:id="@+id/btnSubmitDispute" android:layout_width="match_parent" android:layout_height="52dp" android:gravity="center" android:text="Submit Dispute" android:textColor="@color/on_error" android:textStyle="bold" android:background="@drawable/bg_pill_primary" android:backgroundTint="@color/error" android:clickable="true" android:focusable="true"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

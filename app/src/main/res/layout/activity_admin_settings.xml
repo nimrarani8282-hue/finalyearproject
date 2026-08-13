@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/surface_container_lowest"
+        app:title="@string/admin_nav_settings"
+        app:titleTextColor="@color/on_surface"
+        app:navigationIcon="@android:drawable/ic_menu_revert"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Platform Fee Rate (%)"
+                android:textColor="@color/on_surface"/>
+            <EditText
+                android:id="@+id/etFeeRate"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="1.2"
+                android:inputType="numberDecimal"
+                android:gravity="end"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto-flag High-Risk Accounts"
+                android:textColor="@color/on_surface"/>
+            <Switch
+                android:id="@+id/switchAutoFlag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_card_rounded"
+            android:padding="16dp"
+            android:layout_marginBottom="24dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Email Alerts for Disputes"
+                android:textColor="@color/on_surface"/>
+            <Switch android:id="@+id/switchEmailAlerts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:gravity="center"
+            android:text="Save Settings"
+            android:textColor="@color/on_primary"
+            android:textStyle="bold"
+            android:background="@drawable/bg_pill_primary"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>

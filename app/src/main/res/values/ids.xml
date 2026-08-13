@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvWelcome" type="id" />
+    <item name="btnTopUp" type="id" />
+    <item name="btnWithdraw" type="id" />
+    <item name="btnCreateRequest" type="id" />
+    <item name="btnMyTransactions" type="id" />
+    <item name="btnHistory" type="id" />
+    <item name="btnSupport" type="id" />
+    <item name="btnDetailsCard1" type="id" />
+    <item name="btnDetailsCard2" type="id" />
+    <item name="btnResolveCard3" type="id" />
+    <item name="btnSecuritySettings" type="id" />
+    <item name="cardPaymentSubmission" type="id" />
+    <item name="cardServiceRequest" type="id" />
+    <item name="cardConfirmReceipt" type="id" />
+    <item name="cardReviewFeedback" type="id" />
+    <item name="cardReportIssue" type="id" />
+    <item name="rvBuyerTransactions" type="id" />
+    <item name="btnViewAllBuyerTransactions" type="id" />
+    <item name="bottomNav" type="id" />
+</resources>

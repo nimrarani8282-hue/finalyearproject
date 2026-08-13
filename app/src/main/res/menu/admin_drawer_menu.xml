@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_admin_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_shield" />
+
+    <item
+        android:id="@+id/nav_admin_payments"
+        android:title="Payments"
+        android:icon="@drawable/ic_payments" />
+
+    <item
+        android:id="@+id/nav_admin_escrow_holdings"
+        android:title="Escrow Holdings"
+        android:icon="@drawable/ic_wallet" />
+
+    <item
+        android:id="@+id/nav_admin_disputes"
+        android:title="Disputes"
+        android:icon="@drawable/ic_shield" />
+
+    <item
+        android:id="@+id/nav_admin_users"
+        android:title="Users"
+        android:icon="@drawable/ic_person" />
+
+    <item
+        android:id="@+id/nav_admin_reports"
+        android:title="Reports"
+        android:icon="@drawable/ic_search" />
+
+    <item
+        android:id="@+id/nav_admin_settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_description" />
+
+    <item
+        android:id="@+id/nav_admin_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_shield" />
+</menu>

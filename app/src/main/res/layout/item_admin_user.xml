@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/surface_container_lowest"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- User Initials Circle -->
+    <LinearLayout
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@color/primary_container"
+        android:gravity="center"
+        android:layout_marginEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvUserInitials"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JD"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_primary_container" />
+    </LinearLayout>
+
+    <!-- User Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="John Doe"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="@color/on_surface"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvUserSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Verified Buyer"
+            android:textSize="12sp"
+            android:textColor="@color/on_surface_variant" />
+    </LinearLayout>
+
+    <!-- Flagged Badge -->
+    <TextView
+        android:id="@+id/tvUserFlag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️"
+        android:textSize="20sp"
+        android:layout_marginStart="8dp"
+        android:visibility="gone" />
+
+</LinearLayout>

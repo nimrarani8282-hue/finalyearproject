@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/surface_container_lowest"
+            app:title="@string/admin_panel"
+            app:titleTextColor="@color/primary"
+            app:navigationIcon="@android:drawable/ic_menu_sort_by_size"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="56dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <!--  Header  -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/financial_oversight"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_surface"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/financial_oversight_desc"
+                    android:textSize="13sp"
+                    android:textColor="@color/on_surface_variant"
+                    android:layout_marginBottom="16dp"/>
+                <!--  Total Escrow Holding hero card  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_card_primary_container"
+                    android:padding="20dp"
+                    android:layout_marginBottom="12dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_escrow_holding"
+                        android:textSize="12sp"
+                        android:textColor="@color/on_primary_fixed"/>
+                    <TextView
+                        android:id="@+id/tvTotalHolding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$2,481,290.55" android:textSize="26sp" android:textStyle="bold" android:textColor="@color/on_primary_fixed" android:layout_marginBottom="8dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▲ +12.5% from last week" android:textSize="12sp" android:textColor="@color/tertiary"/>
+                </LinearLayout>
+                <!--  Status mini cards  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="20dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_card_rounded" android:padding="14dp" android:layout_marginEnd="8dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="142" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Payment Verifications" android:textSize="11sp" android:textColor="@color/on_surface_variant"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:background="@drawable/bg_card_rounded" android:padding="14dp">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="89" android:textSize="22sp" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending Releases" android:textSize="11sp" android:textColor="@color/on_surface_variant"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--  Critical Issue Handling  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="10dp">
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/critical_issue_handling" android:textSize="16sp" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                    <TextView android:id="@+id/btnViewAllDisputes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/view_all" android:textColor="@color/primary" android:textSize="13sp" android:clickable="true" android:focusable="true"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvCriticalIssues" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp"/>
+                <!--  Commission Handling  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card_rounded" android:padding="18dp" android:layout_marginBottom="20dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/commission_handling" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/on_surface" android:layout_marginBottom="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Average fee rate: 1.2% · Daily Revenue $14,290.00" android:textSize="12sp" android:textColor="@color/on_surface_variant" android:layout_marginBottom="14dp"/>
+                    <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="2" android:rowCount="2">
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:background="@drawable/bg_card_container_low" android:padding="10dp" android:layout_margin="4dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="P2P Sales" android:textSize="10sp" android:textColor="@color/on_surface_variant"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$8,440" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:background="@drawable/bg_card_container_low" android:padding="10dp" android:layout_margin="4dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Freelance" android:textSize="10sp" android:textColor="@color/on_surface_variant"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$3,120" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:background="@drawable/bg_card_container_low" android:padding="10dp" android:layout_margin="4dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Real Estate" android:textSize="10sp" android:textColor="@color/on_surface_variant"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$1,900" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        </LinearLayout>
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_columnWeight="1" android:orientation="vertical" android:background="@drawable/bg_card_container_low" android:padding="10dp" android:layout_margin="4dp">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Automotive" android:textSize="10sp" android:textColor="@color/on_surface_variant"/>
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$830" android:textStyle="bold" android:textColor="@color/on_surface"/>
+                        </LinearLayout>
+                    </GridLayout>
+                </LinearLayout>
+                <!--  User Management panel  -->
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card_rounded" android:padding="18dp" android:layout_marginBottom="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/user_management" android:textSize="15sp" android:textStyle="bold" android:textColor="@color/on_surface" android:layout_marginBottom="12dp"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_icon_square_high" android:padding="12dp" android:layout_marginBottom="8dp">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="New Registrations" android:textSize="13sp" android:textColor="@color/on_surface"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="48" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/on_surface"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/rowFlaggedAccounts" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:background="@drawable/bg_icon_square_high" android:padding="12dp" android:clickable="true" android:focusable="true">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Flagged Accounts" android:textSize="13sp" android:textColor="@color/error"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/error"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.google.android.material.navigation.NavigationView android:id="@+id/navigationView" android:layout_width="280dp" android:layout_height="match_parent" android:layout_gravity="start" app:headerLayout="@layout/nav_header_admin" app:menu="@menu/admin_drawer_menu"/>
+</androidx.drawerlayout.widget.DrawerLayout>

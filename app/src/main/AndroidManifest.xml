@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+package="com.example.escrowapp">
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+<application
+    android:allowBackup="true"
+    android:icon="@mipmap/logo"
+    android:roundIcon="@mipmap/logo"
+    android:label="@string/app_name"
+    android:theme="@style/Theme.EscrowApp">
+
+    <activity
+        android:name="com.example.escrowapp.SplashActivity"
+        android:exported="true"
+        android:screenOrientation="portrait">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+    <activity
+        android:name="com.example.escrowapp.OnboardingActivity"
+        android:exported="false"
+        android:screenOrientation="portrait" />
+
+    <activity
+        android:name="com.example.escrowapp.LoginActivity"
+        android:exported="false"
+        android:screenOrientation="portrait" />
+
+    <activity
+        android:name="com.example.escrowapp.RegisterActivity"
+        android:exported="false"
+        android:screenOrientation="portrait" />
+
+    <activity
+        android:name="com.example.escrowapp.BuyerDashboardActivity"
+        android:exported="false"
+        android:screenOrientation="portrait" />
+
+</application>
+</manifest>
